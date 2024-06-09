@@ -10,7 +10,7 @@ const Products =() => {
     const [products,setproducts]=useState([]);
     useEffect( ()=>{
       async function fetchApi(){
-        const res= await fetch("http://localhost:3000/lib")
+        const res= await fetch("https://shop-store-dov9.vercel.app/lib")
         const prod=await res.json();
         
         setproducts(prod)
