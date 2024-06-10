@@ -5,17 +5,17 @@ import { addProduct, removeProduct } from "../redux/Slices/addcartSlice";
 
 
 const AddCart = (prop) => {
-    // console.log(prop);
     const selector = useSelector((state) => state.addCart.Product);
     const dispatch = useDispatch();
     const [cart,setRemove]=useState(true)
    function AddToCart(){
     setRemove(false);
-    dispatch(addProduct(prop));
+    dispatch(addProduct(prop.prop));
    }
+   
    function RemoveToCart(){
     setRemove(true);
-    selector.map((item) => dispatch(removeProduct(item)));
+    dispatch(removeProduct(prop.prop)) 
 }
   return (
     <div>

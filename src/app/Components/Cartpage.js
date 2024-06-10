@@ -11,7 +11,6 @@ const Cartpage = () => {
   const price = useSelector((state) => state.addCart.price);
   const [cart,setRemove]=useState(false)
   const RemoveProduct=(item)=>{
-    // console.log(item);
     setRemove(true)
     dispatch(removeProduct(item))
   }
