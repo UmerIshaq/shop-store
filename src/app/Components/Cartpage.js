@@ -9,6 +9,12 @@ const Cartpage = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.addCart.Product);
   const price = useSelector((state) => state.addCart.price);
+  const [cart,setRemove]=useState(false)
+  const RemoveProduct=(item)=>{
+    // console.log(item);
+    setRemove(true)
+    dispatch(removeProduct(item))
+  }
   return (
     <div className="py-20">
       {data.length == 0 ? (
@@ -39,7 +45,7 @@ const Cartpage = () => {
                   <div key={item.id}>
                     <button
                       className=""
-                      onClick={() => dispatch(removeProduct(item))}
+                      onClick={() => RemoveProduct(item)}
                       key={item.id}
                     >
                       <MdCancel className="w-8 h-8 text-[rgb(22,104,148)]" />

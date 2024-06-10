@@ -12,10 +12,11 @@ export const addCartSlice=createSlice({
     initialState,
     reducers:{
         addProduct:(state,action)=>{
-            state.price+=action.payload.Price
+            state.price+=action.payload.prop.Price
+            // console.log(action.payload.prop);
             const data={
                 id:nanoid(),
-                name:action.payload
+                name:action.payload.prop
                 
             }
             state.Product.push(data)

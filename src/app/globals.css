@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.button{
-    @apply bg-[rgb(22,104,148)] py-3 px-6 mt-2 text-white hover:bg-white hover:text-[rgb(22,104,148)]
-    hover:ring-2 hover:ring-[rgb(22,104,148)] hover:transition-all transition-all hover:font-bold
+.button1{
+    @apply bg-[rgb(22,104,148)] py-3 px-7 ring-2 ring-[rgb(22,104,148)] mt-2 text-white transition-all 
+}
+.button2{
+    @apply bg-white py-3 px-6 mt-2 text-[rgb(22,104,148)] ring-2 ring-[rgb(22,104,148)] transition-all font-bold
+     
 }
 .card-image{
     @apply rounded-2xl max-[400px]:hover:scale-[1] hover:scale-[1.1] transition-all
